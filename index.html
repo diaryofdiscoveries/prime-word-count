@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="public/css/index.css">
+    <script src="src/textFileHandler.js"></script>
+    <script src="src/wordSeparator.js"></script>
+    <script src="src/wordCounter.js"></script>
+    <script src="src/wordCountViewer.js"></script>
+    <script src="src/index.js"></script>
+  </head>
+  <body>
+    <h1>Prime Word Count</h1>
+    <input type='file' accept='text/plain' onchange='textFileHandler.load(event.target.files[0])'><br><br>
+    <button onclick="execute()">Count Each Word</button><br>
+    <div id='output'>
+    </div>
+  </body>
+</html>
