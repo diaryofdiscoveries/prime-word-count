@@ -48,7 +48,9 @@ I then domain mapped how the application would run, which helped me decide on th
 
 - Word Counter - Responsible for finding unique words and the number of times each of them appears.
 
-- Word Count Viewer - Responsible for rendering words and word count in a table.
+- Prime Notifier - Responsible for determining if the number of times a given word appears is a prime number.
+
+- Word Count Viewer - Responsible for rendering words, word count and prime number verification in a table.
 
 I used the Constructor/Prototype pattern and TDD (unit tests) to guide the process, ensuring functions were encapsulated to help debugging and testing.
 
@@ -56,6 +58,6 @@ For simplicity, I decided to create a browser application, rather than using any
 
 Note: This application assumes that all clusters of letters in the text file are real words. In the case of using it to analyse the content of book text files, I think this a fair assumption. However, the application could be refined by referencing the clusters of letters against a dictionary to validate them as words.
 
-Screenshots of the Application in Action
+Screenshot of the Application in Action
 ----
-![Great Expectations](public/img/part-1-screenshot.png)
+![Great Expectations](public/img/part-2-screenshot.png)
