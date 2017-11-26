@@ -1,13 +1,15 @@
 (function(exports){
 
-  function WordCountViewer() {
+  function WordCountViewer(primeNotifier) {
+    this.primeNotifier = primeNotifier;
   }
 
-  WordCountViewer.prototype.display = function(hash) {
+  WordCountViewer.prototype.display = function(countHash) {
       var wordhtml = '';
-      var headerhtml = '<table><tr><th>WORD</th><th>COUNT</th></tr>';
-      for (var [word, count] of Object.entries(hash)) {
-        wordhtml += `<tr><td>${word}</td><td>${count}</td></tr>`;
+      var headerhtml = '<table><tr><th>WORD</th><th>COUNT</th><th>PRIME?</th></tr>';
+      for (var [word, count] of Object.entries(countHash)) {
+        var prime = this.primeNotifier.evaluate(count);
+        wordhtml += `<tr><td>${word}</td><td>${count}</td><td>${prime}</td></tr>`;
       }
       return headerhtml + wordhtml + '</table>';
   };

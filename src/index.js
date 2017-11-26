@@ -2,7 +2,8 @@ var fileReader = new FileReader();
 var textFileHandler = new TextFileHandler(fileReader);
 var wordSeparator = new WordSeparator();
 var wordCounter = new WordCounter();
-var wordCountViewer = new WordCountViewer();
+var primeNotifier = new PrimeNotifier();
+var wordCountViewer = new WordCountViewer(primeNotifier);
 
 var execute = function() {
   var output = document.getElementById('output');

@@ -1,9 +1,13 @@
 describe("WordCountViewer", function() {
 
+  var primeNotifier = jasmine.createSpyObj("primeNotifier", {
+    'evaluate': ''
+  });
+
   var wordCountViewer;
 
   beforeEach(function() {
-    wordCountViewer = new WordCountViewer();
+    wordCountViewer = new WordCountViewer(primeNotifier);
   });
 
   describe("#display", function(){
@@ -14,14 +18,17 @@ describe("WordCountViewer", function() {
           '<tr>',
             '<th>WORD</th>',
             '<th>COUNT</th>',
+            '<th>PRIME?</th>',
           '</tr>',
           '<tr>',
             '<td>hello</td>',
             '<td>4</td>',
+            '<td></td>',
           '</tr>',
           '<tr>',
             '<td>goodbye</td>',
             '<td>2</td>',
+            '<td></td>',
           '</tr>',
         '</table>'].join(''));
     });
