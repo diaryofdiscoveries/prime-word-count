@@ -1,6 +1,6 @@
 Prime Word Count
 ================
-A simple browser application that takes any text file as input, and outputs a table containing the individual words that appear in it, how many times that word appears, and whether the number of times each word appears is a prime number.
+A simple browser application that takes any text file as input, and outputs a table containing the individual words that appear in it, the number of times a word appears, and if that is a prime number.
 
 Technologies used
 ----
@@ -40,17 +40,17 @@ As a user,
 So that I can view the file's word count information,
 I want to see each word and the number of times it appears (with a note if it is prime number) outputted as a table.
 ```
-I then domain mapped how the application would run, which helped me decide on the separation of concerns:
+I then domain mapped how the application would run, which helped me decide on the **separation of concerns**:
 
-- Text File Handler - Responsible for getting the text from the text file.
+- **Text File Handler** - Responsible for getting the text from the text file.
 
-- Word Separator - Responsible for splitting up the text into words.
+- **Word Separator** - Responsible for splitting up the text into words.
 
-- Word Counter - Responsible for finding unique words and the number of times each of them appears.
+- **Word Counter** - Responsible for finding unique words and the number of times each of them appears.
 
-- Prime Notifier - Responsible for determining if the number of times a given word appears is a prime number.
+- **Prime Notifier** - Responsible for determining if the number of times a given word appears is a prime number.
 
-- Word Count Viewer - Responsible for rendering words, word count and prime number verification in a table.
+- **Word Count Viewer** - Responsible for rendering words, word count and prime number verification in a table.
 
 I used the Constructor/Prototype pattern and TDD (unit tests) to guide the process, ensuring functions were encapsulated to help debugging and testing.
 
@@ -60,4 +60,5 @@ Note: This application assumes that all clusters of letters in the text file are
 
 Screenshot of the Application in Action
 ----
+
 ![Great Expectations](public/img/part-2-screenshot.png)
